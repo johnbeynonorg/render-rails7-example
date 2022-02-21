@@ -11,6 +11,7 @@ services:
     name: rails7-example
     env: ruby
     region: frankfurt
+    healthCheckPath: /
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     autoDeploy: true
