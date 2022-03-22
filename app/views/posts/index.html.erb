@@ -2,10 +2,10 @@
 
 <h1>Posts</h1>
 
-<div id="posts">
+<ul>
   <% @posts.each do |post| %>
-    <%= link_to "Show this post", post %>
+    <li><%= link_to "Show this post", post %></li>
   <% end %>
-</div>
+</ul>
 
 <%= link_to "New post", new_post_path %>
