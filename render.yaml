@@ -1,14 +1,14 @@
 previewsEnabled: true
 databases:
   - name: rails7masterdetaildb
-    databaseName: rails7example-master-detail
+    databaseName: rails7examplemasterdetail
     user: rails7example
     postgresMajorVersion: 14
     region: frankfurt
 
 services:
   - type: web
-    name: rails7-example-master-detail
+    name: rails7examplemasterdetail
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
