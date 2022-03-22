@@ -13,7 +13,7 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     region: frankfurt
-    healthCheckPath: /
+    healthCheckPath: /posts
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
