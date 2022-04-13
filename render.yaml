@@ -3,14 +3,14 @@ databases:
   - name: rails7-example
     databaseName: rails7example
     user: rails7example
-    region: frankfurt
+    region: ohio
     postgresMajorVersion: 14
 
 services:
   - type: web
     name: rails7-example
     env: ruby
-    region: frankfurt
+    region: ohio
     healthCheckPath: /
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
