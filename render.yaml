@@ -1,6 +1,6 @@
 previewsEnabled: true
 databases:
-  - name: rails7-example
+  - name: rails7-example-ohio
     databaseName: rails7example
     user: rails7example
     region: ohio
@@ -8,7 +8,7 @@ databases:
 
 services:
   - type: web
-    name: rails7-example
+    name: rails7-example-ohio
     env: ruby
     region: ohio
     healthCheckPath: /
