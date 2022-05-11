@@ -1,4 +1,8 @@
 <h1>New deploy BLUE</h1>
 <p>Response from: <%= ENV['RENDER_INSTANCE_ID']%>
 
-<%= request.remote_ip %>
+<ul>
+	<li><%= request.remote_ip %></li>
+	<li><%= request.ip %></li>
+	<li><%= request.HTTP_X_FORWARDED_FOR %></li>
+</ul>
