@@ -4,17 +4,20 @@ set -o errexit
 
 # Install FreeDTS and build if it's not in the cache
 if [[ ! -d /opt/render/project/nodes/freedts ]]; then
+  echo "Downloading and compiling FreeDTS"
   mkdir -p ~/tmp
   mkdir -p ~/local/bin/freedts
 
   wget -P ~/tmp ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.3.10.tar.gz
   cd ~/tmp
-  tar -xvzf freetds-1.3.10.tar.gz
+  tar -xzf freetds-1.3.10.tar.gz
   cd freetds-1.3.10
   autoconf
   ./configure --prefix=/opt/render/project/nodes/freedts
   make
   make install
+else
+  echo "Using FreeDTS from build cache"
 fi
 
 PATH="${PATH}:${HOME}/opt/render/project/nodes/freedts/bin"
