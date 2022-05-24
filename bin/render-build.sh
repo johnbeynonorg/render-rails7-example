@@ -16,6 +16,8 @@ make
 make install
 PATH="${PATH}:${HOME}/opt/render/project/nodes/freedts/bin"
 
+cd $HOME/project/src
+
 # We always want these run
 bundle config set --local without 'development test'
 bundle install
