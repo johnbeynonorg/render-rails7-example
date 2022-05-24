@@ -27,9 +27,10 @@ mkdir -p ~/local/src/freedts
 wget -P ~/tmp ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.3.10.tar.gz
 cd ~/tmp
 tar -xvzf freetds-1.3.10.tar.gz
-# configure --help
-# configure
+cd freetds-1.3.10
 autoconf
+./configure
+# autoconf
 make
 
 
