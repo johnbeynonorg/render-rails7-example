@@ -32,20 +32,6 @@ tar -xvzf freetds-1.3.10.tar.gz
 cd freetds-1.3.10
 autoconf
 ./configure --prefix=/opt/render/tmp/local/bin/freedts
-# autoconf
 make
 make install
 PATH="${PATH}:${HOME}/local/bin/freedts/"
-
-
-#dpkg -x ~/tmp/google-chrome-stable_current_amd64.deb ~/local/src/chrome/
-#export PATH="${PATH}:${HOME}/local/src/chrome/opt/google/chrome/"
-#rm ~/tmp/google-chrome-stable_current_amd64.deb
-#rmdir ~/tmp
-
-
-# $ ./configure --help
-# $ ./configure
-# $ make
-# $ make install
-
