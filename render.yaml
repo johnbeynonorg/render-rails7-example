@@ -10,7 +10,7 @@ services:
     name: rails7-example
     env: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    startCommand: "./bin/render-start.sh"
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
