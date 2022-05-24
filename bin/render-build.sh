@@ -16,16 +16,13 @@ if [[ ! -d /opt/render/project/nodes/freedts ]]; then
   ./configure --prefix=/opt/render/project/nodes/freedts
   make
   make install
+  cd $HOME/project/src # Make sure we return to where we were
 else
   echo "Using FreeDTS from build cache"
 fi
 
-PATH="${PATH}:${HOME}/opt/render/project/nodes/freedts/bin"
-
 # Set a bundler config option with the path to the freedts directory
 bundle config build.tiny_tds --with-freetds-dir=/opt/render/project/nodes/freedts/
-
-cd $HOME/project/src
 
 # We always want these run
 bundle config set --local without 'development test'
@@ -45,5 +42,3 @@ then
 else
   echo "Not a web process so nothing to do here."  
 fi
-
-#gem install tiny_tds -- --with-freetds-dir=/opt/render/project/nodes/freedts/
