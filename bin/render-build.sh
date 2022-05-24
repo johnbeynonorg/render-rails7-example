@@ -31,7 +31,7 @@ cd ~/tmp
 tar -xvzf freetds-1.3.10.tar.gz
 cd freetds-1.3.10
 autoconf
-./configure --prefix=/opt/render/tmp/local/bin/freedts
+./configure --prefix=/opt/render/project/nodes/freedts
 make
 make install
-PATH="${PATH}:${HOME}/local/bin/freedts/"
+PATH="${PATH}:${HOME}//opt/render/project/nodes/freedts/"
