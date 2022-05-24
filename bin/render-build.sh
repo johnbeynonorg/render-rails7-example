@@ -16,8 +16,7 @@ make
 make install
 PATH="${PATH}:${HOME}/opt/render/project/nodes/freedts/bin"
 
-# Install it so we've done it
-gem install tiny_tds -- --with-freetds-dir=/opt/render/project/nodes/freedts/
+bundle config build.tiny_tds --with-freetds-dir=/opt/render/project/nodes/freedts/
 
 cd $HOME/project/src
 
