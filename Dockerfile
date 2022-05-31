@@ -26,6 +26,8 @@ WORKDIR /work
 
 ENV RAILS_ENV production
 
+RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env
+
 COPY --from=builder /usr/lib /usr/lib
 COPY --from=builder /usr/share/zoneinfo/ /usr/share/zoneinfo/
 COPY --from=builder /usr/local/bundle /usr/local/bundle
