@@ -11,8 +11,8 @@ COPY Gemfile Gemfile.lock ./
 RUN gem install bundler -v $BUNDLER_VERSION
 RUN bundle install
 
-COPY package.json yarn.lock ./
-RUN yarn install
+#COPY package.json yarn.lock ./
+#RUN yarn install
 
 ADD . $APP_PATH
 
