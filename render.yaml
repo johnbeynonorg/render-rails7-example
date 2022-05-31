@@ -8,9 +8,9 @@ databases:
 services:
   - type: web
     name: rails7-example
-    env: ruby
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    env: docker
+    # buildCommand: "./bin/render-build.sh"
+    # startCommand: "bundle exec puma -C config/puma.rb"
     healthCheckPath: /
     autoDeploy: true
     envVars:
