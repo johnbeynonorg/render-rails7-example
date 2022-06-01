@@ -32,4 +32,6 @@ COPY --from=builder /usr/lib /usr/lib
 COPY --from=builder /usr/share/zoneinfo/ /usr/share/zoneinfo/
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /work /work
+
+RUN rails assets:precompile
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
