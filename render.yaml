@@ -18,5 +18,15 @@ services:
         fromDatabase:
           name: rails7-example
           property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: rails7-redis
+          type: redis
+          property: connectionString
       - key: SECRET_KEY_BASE
         generateValue: true
+
+  - type: redis
+    name: rails7-redis
+    ipAllowList: []
+    plan: free # optional (defaults to starter)
