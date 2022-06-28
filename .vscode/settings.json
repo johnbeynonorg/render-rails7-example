@@ -1,0 +1,8 @@
+{
+	"yaml.schemas": {
+		"/Users/johnbeynon/render.schema.json": [
+			"NEW render.yaml",
+			"file:///Users/johnbeynon/workspace/ruby/render-rails7-example/render.yaml"
+		]
+	}
+}
