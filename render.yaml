@@ -4,6 +4,7 @@ databases:
     databaseName: rails7example
     user: rails7example
     postgresMajorVersion: 14
+    plan: Starter Plus
 
 services:
   - type: web
