@@ -12,7 +12,7 @@ services:
     dockerfilePath: Dockerfile.render
     # buildCommand: "./bin/render-build.sh"
     # startCommand: "bundle exec puma -C config/puma.rb"
-    healthCheckPath: /
+    # healthCheckPath: /
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
