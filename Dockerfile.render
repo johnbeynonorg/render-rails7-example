@@ -1,4 +1,4 @@
-ENV THIS_IS_IN_THE_BUILD
+ARG THIS_IS_IN_THE_BUILD
 #RUN echo $THIS_IS_IN_THE_BUILD
 
 FROM ghcr.io/renderinc/heroku-app-builder:heroku-20 AS builder
