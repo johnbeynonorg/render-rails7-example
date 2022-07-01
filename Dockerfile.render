@@ -5,6 +5,9 @@ FROM ghcr.io/renderinc/heroku-app-builder:heroku-20 AS builder
 # 2. Detect the language
 # 3. Build the app using the appropriate Heroku buildpack. All Heroku's official buildpacks are supported.
 
+ARG THIS_IS_IN_THE_BUILD
+RUN echo $THIS_IS_IN_THE_BUILD
+
 # For running the app, we use a clean base image and also one without Ubuntu development packages
 # https://devcenter.heroku.com/articles/heroku-20-stack#heroku-20-docker-image
 FROM ghcr.io/renderinc/heroku-app-runner:heroku-20 AS runner
@@ -17,9 +20,7 @@ COPY --from=builder --chown=1000:1000 /app /app/
 USER 1000:1000
 WORKDIR /app
 
-ARG THIS_IS_IN_THE_BUILD
 
-RUN echo $THIS_IS_IN_THE_BUILD
 
 # Source all /app/.profile.d/*.sh files before process start.
 # These are created by buildpacks.
