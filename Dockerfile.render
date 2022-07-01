@@ -17,6 +17,8 @@ COPY --from=builder --chown=1000:1000 /app /app/
 USER 1000:1000
 WORKDIR /app
 
+RUN echo $THIS_IS_IN_THE_BUILD
+
 # Source all /app/.profile.d/*.sh files before process start.
 # These are created by buildpacks.
 # https://devcenter.heroku.com/articles/buildpack-api#profile-d-scripts
