@@ -1,5 +1,6 @@
-ARG THIS_IS_IN_THE_BUILD=$THIS_IS_IN_THE_BUILD
+ARG THIS_IS_IN_THE_BUILD
 FROM ghcr.io/renderinc/heroku-app-builder:heroku-20 AS builder
+
 
 
 # The FROM statement above triggers the following steps
