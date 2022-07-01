@@ -4,3 +4,5 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+puts ENV['THIS_IS_IN_THE_BUILD']
