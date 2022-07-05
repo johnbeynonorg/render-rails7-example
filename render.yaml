@@ -4,11 +4,13 @@ databases:
     databaseName: rails7example
     user: rails7example
     postgresMajorVersion: 14
+    region: frankfurt
 
 services:
   - type: web
     name: rails7-example
     env: docker 
+    region: frankfurt
     dockerfilePath: Dockerfile.render
     # buildCommand: "./bin/render-build.sh"
     # startCommand: "bundle exec puma -C config/puma.rb"
