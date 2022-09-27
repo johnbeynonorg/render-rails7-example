@@ -1,6 +1,5 @@
 {
   "buildpacks": [
-    "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku-community/apt.tgz",
     "heroku/ruby"
   ]
 }
