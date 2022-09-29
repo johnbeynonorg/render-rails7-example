@@ -10,5 +10,3 @@ puts ENV['THIS_IS_IN_THE_BUILD']
 
 
 Rails.application.load_tasks
-
-
