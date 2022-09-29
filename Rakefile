@@ -3,8 +3,10 @@
 
 require_relative "config/application"
 
+puts ENV['RAILS_ENV']
 puts "THIS IS IN THE BUILD:"
 puts ENV['THIS_IS_IN_THE_BUILD']
+
 
 Rails.application.load_tasks
 
