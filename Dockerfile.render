@@ -4,8 +4,10 @@
 # @renderinc/heroku-import v3.0.0 and above.
 ARG HEROKU_STACK=v2-heroku-20
 ARG THIS_IS_IN_THE_BUILD_ARG=FOOBAH
+ARG THIS_IS_A_TEST
 
 FROM ghcr.io/renderinc/heroku-app-builder:${HEROKU_STACK} AS builder
+RUN printenv
 ENV THIS_IS_IN_THE_BUILD=$THIS_IS_IN_THE_BUILD_ARG
 
 # The FROM statement above triggers the following steps

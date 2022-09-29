@@ -23,6 +23,13 @@ services:
         fromDatabase:
           name: postgresql-corrugated-36657
           property: connectionString
+      - fromGroup: testgroup
+
+envVarGroups:
+  - name: testgroup
+    envVars:
+    - key: THIS_IS_A_TEST
+      value: FOOBAH
 
 databases: # Render PostgreSQL database
   - name: postgresql-corrugated-36657

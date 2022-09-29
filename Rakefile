@@ -7,6 +7,7 @@ puts ENV['RAILS_ENV']
 puts ENV['RAILS_LOG_TO_STDOUT']
 puts "THIS IS IN THE BUILD:"
 puts ENV['THIS_IS_IN_THE_BUILD']
+puts ENV['THIS_IS_A_TEST']
 
 
 Rails.application.load_tasks
