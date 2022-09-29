@@ -30,6 +30,8 @@ envVarGroups:
     envVars:
     - key: THIS_IS_A_TEST
       value: FOOBAH
+    - key: THIS_IS_IN_THE_BUILD
+      value: WILD
 
 databases: # Render PostgreSQL database
   - name: postgresql-corrugated-36657
