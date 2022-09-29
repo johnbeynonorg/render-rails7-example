@@ -3,6 +3,8 @@
 # use custom buildpacks. We do not support using the original stack images with
 # @renderinc/heroku-import v3.0.0 and above.
 ARG HEROKU_STACK=v2-heroku-20
+ARG THIS_IS_A_TEST
+
 FROM ghcr.io/renderinc/heroku-app-builder:${HEROKU_STACK} AS builder
 ARG THIS_IS_IN_THE_BUILD_ARG=FOOBAH
 ARG THIS_IS_A_TEST
