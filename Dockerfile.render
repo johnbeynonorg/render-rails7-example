@@ -4,12 +4,13 @@
 # @renderinc/heroku-import v3.0.0 and above.
 ARG HEROKU_STACK=v2-heroku-20
 ARG THIS_IS_A_TEST
+ARG THIS_IS_IN_THE_BUILD
 
 FROM ghcr.io/renderinc/heroku-app-builder:${HEROKU_STACK} AS builder
-ARG THIS_IS_IN_THE_BUILD_ARG=FOOBAH
+ARG THIS_IS_IN_THE_BUILD
 ARG THIS_IS_A_TEST
 RUN printenv
-ENV THIS_IS_IN_THE_BUILD=$THIS_IS_IN_THE_BUILD_ARG
+
 
 # The FROM statement above triggers the following steps
 # 1. Copy the contents of the directory containing this Dockerfile to a Docker image
