@@ -3,16 +3,11 @@
 # use custom buildpacks. We do not support using the original stack images with
 # @renderinc/heroku-import v3.0.0 and above.
 ARG HEROKU_STACK=v2-heroku-20
-ARG THIS_IS_A_TEST
 ARG THIS_IS_IN_THE_BUILD
 
 FROM ghcr.io/renderinc/heroku-app-builder:${HEROKU_STACK} AS builder
 ARG THIS_IS_IN_THE_BUILD
-ARG THIS_IS_A_TEST
-ENV THIS_IS_IN_THE_BUILD $THIS_IS_IN_THE_BUILD
-RUN printenv
-RUN echo "IN THE BUILD"
-
+RUN echo ${THIS_IS_IN_THE_BUILD}
 
 # The FROM statement above triggers the following steps
 # 1. Copy the contents of the directory containing this Dockerfile to a Docker image
@@ -21,9 +16,6 @@ RUN echo "IN THE BUILD"
 # For running the app, we use a clean base image and also one without Ubuntu development packages
 # https://devcenter.heroku.com/articles/heroku-20-stack#heroku-20-docker-image
 FROM ghcr.io/renderinc/heroku-app-runner:${HEROKU_STACK} AS runner
-ARG THIS_IS_IN_THE_BUILD
-ENV THIS_IS_IN_THE_BUILD $THIS_IS_IN_THE_BUILD
-RUN echo "IN THE RUNNER"
 
 # Copy build artifacts to runtime image
 COPY --from=builder --chown=1000:1000 /render /render/
