@@ -5,5 +5,6 @@ require_relative "config/application"
 
 puts "THIS IS IN THE BUILD:"
 puts ENV['THIS_IS_IN_THE_BUILD']
+puts ENV.keys
 
 Rails.application.load_tasks
