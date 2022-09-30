@@ -11,6 +11,7 @@ ARG THIS_IS_IN_THE_BUILD
 ARG THIS_IS_A_TEST
 ENV THIS_IS_IN_THE_BUILD $THIS_IS_IN_THE_BUILD
 RUN printenv
+RUN echo "IN THE BUILD"
 
 
 # The FROM statement above triggers the following steps
@@ -22,6 +23,7 @@ RUN printenv
 FROM ghcr.io/renderinc/heroku-app-runner:${HEROKU_STACK} AS runner
 ARG THIS_IS_IN_THE_BUILD
 ENV THIS_IS_IN_THE_BUILD $THIS_IS_IN_THE_BUILD
+RUN echo "IN THE RUNNER"
 
 # Copy build artifacts to runtime image
 COPY --from=builder --chown=1000:1000 /render /render/
