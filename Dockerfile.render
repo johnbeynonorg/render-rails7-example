@@ -19,7 +19,7 @@ RUN printenv
 # For running the app, we use a clean base image and also one without Ubuntu development packages
 # https://devcenter.heroku.com/articles/heroku-20-stack#heroku-20-docker-image
 FROM ghcr.io/renderinc/heroku-app-runner:${HEROKU_STACK} AS runner
-ENV THIS_IS_IN_THE_BUILD=$THIS_IS_IN_THE_BUILD_ARG
+ARG THIS_IS_IN_THE_BUILD
 
 # Copy build artifacts to runtime image
 COPY --from=builder --chown=1000:1000 /render /render/
