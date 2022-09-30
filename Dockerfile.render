@@ -4,7 +4,6 @@
 # @renderinc/heroku-import v3.0.0 and above.
 ARG HEROKU_STACK=v2-heroku-20
 ARG THIS_IS_IN_THE_BUILD
-RUN printenv
 
 FROM ghcr.io/renderinc/heroku-app-builder:${HEROKU_STACK} AS builder
 ARG THIS_IS_IN_THE_BUILD
