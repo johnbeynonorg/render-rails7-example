@@ -6,9 +6,11 @@ services:
     name: rails7-example-heroku20
     env: docker # valid values: https://render.com/docs/yaml-spec#environment
     dockerfilePath: Dockerfile.render
-    #plan: free # optional; defaults to starter
+    plan: free # optional; defaults to starter
     numInstances: 1
     envVars:
+      - key: HOST # Imported from Heroku app
+        value: 127.0.0.1
       - key: LANG # Imported from Heroku app
         value: en_US.UTF-8
       - key: RACK_ENV # Imported from Heroku app
@@ -23,15 +25,6 @@ services:
         fromDatabase:
           name: postgresql-corrugated-36657
           property: connectionString
-      - fromGroup: testgroup
-
-envVarGroups:
-  - name: testgroup
-    envVars:
-    - key: THIS_IS_A_TEST
-      value: FOOBAH
-    - key: THIS_IS_IN_THE_BUILD
-      value: WILD
 
 databases: # Render PostgreSQL database
   - name: postgresql-corrugated-36657

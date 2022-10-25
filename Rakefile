@@ -3,11 +3,7 @@
 
 require_relative "config/application"
 
-puts "THIS IS IN THE BUILD:"
-puts ENV['THIS_IS_IN_THE_BUILD']
 puts "DATABASE_URL:"
 puts ENV['DATABASE_URL']
-puts "BLAH"
-
 
 Rails.application.load_tasks
