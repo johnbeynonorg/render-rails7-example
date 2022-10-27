@@ -27,6 +27,8 @@ services:
         generateValue: true
       - key: RAILS_SERVE_STATIC_FILES
         value: true
+      - key: RAILS_LOG_TO_STDOUT
+        value: true
 
   - type: redis
     name: rails7-redis

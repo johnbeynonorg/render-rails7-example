@@ -18,8 +18,6 @@ ADD . $APP_PATH
 
 RUN rails assets:precompile
 
-
-
 FROM ruby:3.1
 RUN mkdir -p /work
 WORKDIR /work
