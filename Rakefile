@@ -9,4 +9,7 @@ puts ENV['DATABASE_URL']
 puts "RAILS_MASTER_KEY"
 puts ENV['RAILS_MASTER_KEY']
 
+puts "ENV"
+puts ENV['RAILS_ENV']
+
 Rails.application.load_tasks
