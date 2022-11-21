@@ -3,4 +3,8 @@
 
 require_relative "config/application"
 
+puts Rails.env
+puts ENV['RAILS_ENV']
+puts ENV['RACK_ENV']
+
 Rails.application.load_tasks

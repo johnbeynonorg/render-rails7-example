@@ -4,6 +4,9 @@ RUN apt-get update -qq && apt-get install -y nodejs yarn postgresql-client
 ENV BUNDLER_VERSION 2.2.14
 ENV APP_PATH /work
 
+ARG RACK_ENV
+ARG RAILS_ENV
+
 WORKDIR $APP_PATH
 
 COPY Gemfile Gemfile.lock ./
