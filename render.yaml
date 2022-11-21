@@ -34,5 +34,5 @@ databases: # Render PostgreSQL database
 envVarGroups:
   - name: appvars
     envVars:
-      - key: RAILS_MASTER_KEY
+      - key: RAILS_MASTER
         value: 123456789

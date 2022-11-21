@@ -6,4 +6,7 @@ require_relative "config/application"
 puts "DATABASE_URL:"
 puts ENV['DATABASE_URL']
 
+puts "RAILS_MASTER"
+puts ENV['RAILS_MASTER']
+
 Rails.application.load_tasks
