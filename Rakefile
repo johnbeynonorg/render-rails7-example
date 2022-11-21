@@ -11,5 +11,6 @@ puts ENV['RAILS_MASTER_KEY']
 
 puts "ENV"
 puts ENV['RAILS_ENV']
+puts Rails.env
 
 Rails.application.load_tasks
