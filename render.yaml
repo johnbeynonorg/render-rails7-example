@@ -9,6 +9,7 @@ services:
     plan: free # optional; defaults to starter
     numInstances: 1
     envVars:
+      - fromGroup: appvars
       - key: HOST # Imported from Heroku app
         value: 127.0.0.1
       - key: LANG # Imported from Heroku app
@@ -29,3 +30,9 @@ services:
 databases: # Render PostgreSQL database
   - name: postgresql-corrugated-36657
     ipAllowList: [] # only allow internal connections
+
+envVarGroups:
+  - name: appvars
+    envVars:
+      - key: RAILS_MASTER_KEY
+        value: 123456789
