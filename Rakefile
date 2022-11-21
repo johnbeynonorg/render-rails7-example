@@ -9,7 +9,7 @@ puts ENV['DATABASE_URL']
 puts "RAILS_MASTER_KEY"
 puts ENV['RAILS_MASTER_KEY']
 
-puts "ENV"
+puts "THIS IS IN THE RAKEFILE"
 puts ENV['RAILS_ENV']
 puts Rails.env
 

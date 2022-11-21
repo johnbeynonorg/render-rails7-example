@@ -22,6 +22,7 @@ ARG RAILS_MASTER_KEY
 ARG RACK_ENV
 ARG RAILS_ENV
 
+RUN echo "THIS IS BEFORE THE BUILDPACKS"
 RUN echo $RACK_ENV
 RUN echo $RAILS_ENV
 
@@ -29,6 +30,11 @@ RUN echo $RAILS_ENV
 # in place. We then run the apply-buildpacks.py script here because, unlike our
 # `v2` image, this allows us to expose build-time env vars to your app.
 RUN /render/build-scripts/apply-buildpacks.py ${HEROKU_STACK}
+
+RUN echo "THIS IS AFTER THE BUILDPACKS"
+RUN echo $RACK_ENV
+RUN echo $RAILS_ENV
+
 
 # We strongly recommend that you package a Procfile with your application, but
 # if you don't, we'll try to guess one for you. If this is incorrect, please
