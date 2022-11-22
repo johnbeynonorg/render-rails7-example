@@ -9,7 +9,7 @@ services:
   - type: web
     name: rails7-example
     env: docker
-    dockerCommand: bundle exec puma -C config/puma.rb
+    dockerCommand: echo "DOCKERCOMMAND"; bundle exec puma -C config/puma.rb
     # buildCommand: "./bin/render-build.sh"
     # startCommand: "bundle exec puma -C config/puma.rb"
     # healthCheckPath: /
