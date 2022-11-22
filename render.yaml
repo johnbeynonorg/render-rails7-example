@@ -6,6 +6,11 @@ databases:
     postgresMajorVersion: 14
 
 services:
+  - type: cron
+    name: rails7-cron
+    env: docker
+    dockerCommand: /bin/bash ./bin/render-start-cron.sh
+    schedule: "0 * * * *"
   - type: web
     name: rails7-example
     env: docker
