@@ -1,8 +1,11 @@
-echo "RENDER-START-WEB.SH"
+echo "RENDER-START-CRON.SH"
 
 testfunc() {
-	echo "THIS IS IN TEST FUNC"
+	echo "errno=12345"
+	return 1
 }
 
 eval $(testfunc)
+echo $errno
+
 echo "THIS IS A CRON"
