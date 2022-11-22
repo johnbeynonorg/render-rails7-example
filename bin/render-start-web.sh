@@ -1,4 +1,8 @@
 echo "RENDER-START-WEB.SH"
-eval $( echo VAR="FOO" )
-echo $VAR
+
+testfunc() {
+	echo "THIS IS IN TEST FUNC"
+}
+
+eval $(testfunc)
 bundle exec puma -C config/puma.rb
