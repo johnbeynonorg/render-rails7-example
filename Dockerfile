@@ -1,4 +1,4 @@
-FROM ruby:3.1 as builder
+FROM ruby:3.1.2 as builder
 RUN apt-get update -qq && apt-get install -y nodejs yarn postgresql-client
 
 ENV BUNDLER_VERSION 2.2.14
@@ -22,7 +22,7 @@ ADD . $APP_PATH
 
 RUN rails assets:precompile
 
-FROM ruby:3.1
+FROM ruby:3.1.2
 RUN mkdir -p /work
 WORKDIR /work
 
