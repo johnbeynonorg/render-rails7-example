@@ -9,6 +9,7 @@ services:
   - type: web
     name: rails7-example-paid
     env: docker
+    plan: free
     dockerCommand: /bin/bash ./bin/render-start-web.sh
     autoDeploy: true
     envVars:
